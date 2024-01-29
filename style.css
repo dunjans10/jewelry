@@ -309,10 +309,6 @@ img {
 
 .home__blob{
   width: 250px;
- 
-  /*border: 6px solid transparent;
-  background: var(--first-gradient) padding-box, linear-gradient(90deg, hsl(15, 68%, 50%) 0%, hsl(20, 68%,80%) 100%) border-box;
-  border-radius: 20rem 20rem 0 0;*/
 }
 
 .home__image{
@@ -367,4 +363,106 @@ img {
 
 .bg-header :is(.nav__logo, .nav__toggle){
   color: var(--title-color);
+}
+
+
+/* Popular */
+
+.popular__data{
+  text-align: center;
+}
+
+.popular-content{
+  padding-block: 2.5rem 5rem;
+}
+
+.popular__card{
+  position: relative;
+  width: 200px;
+  height: 352px;
+  background-color: var(--container-color);
+  border-radius: 3.75rem;
+  padding: .75rem .75rem 1rem;
+  margin-inline: 1rem;
+  transition: box-shadow .4s;
+}
+
+
+.popular__card:hover{
+  box-shadow: 0 12px 16px hsla(0, 0%, 0%, .1);
+}
+
+.popular__blob{
+  background-color: var(--body-color);
+  height: 200px;
+  border-radius: 3.75rem;
+  margin-bottom: .75rem;
+}
+
+.popular__img{
+  display: block;
+  width: 185px;
+  margin: 0 auto;
+}
+
+.popular__name{
+  font-size: var(--normal-font-size);
+  margin-bottom: .25rem;
+}
+
+
+.popular__subtitle{
+  display: block;
+  font-size: var(--smaller-font-size);
+  font-family: var(--second-font);
+  font-weight: var(--font-semi-bold);
+  margin-bottom: 1rem;
+}
+
+.popular__price{
+  font-size: var(--h1-font-size);
+}
+
+.popular__price span{
+  color: var(--first-color-alt);
+}
+
+.popular__button{
+  display: inline-flex;
+  padding: .25rem;
+  background: var(--third-gradient);
+  border-radius: .5rem;
+  color: var(--white-color);
+  box-shadow: 0 2px 8px hsla(15, 68%, 32%, .4);
+  position: absolute;
+  right: .75rem;
+  bottom: 3.5rem;
+  cursor: pointer;
+}
+
+/* Swiper JS */
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+  content:'';
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+  top: initial;
+  bottom: -.5rem;
+  background-color: var(--container-color);
+  padding: 22px;
+  border-radius: 50%;
+  color: var(--first-color);
+  font-size: 1.8rem;
+  box-shadow: 0 2px 8px hsla(0, 0%, 0%, .1);
+}
+
+.swiper-button-prev{
+  left: calc(50% - 3rem);
+}
+
+.swiper-button-next{
+  right: calc(50% - 3rem);
 }
