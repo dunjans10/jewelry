@@ -61,3 +61,29 @@ const popularSwiper = new Swiper('.popular__content', {
   }
 
 });
+
+
+//FAQ
+
+document.addEventListener("DOMContentLoaded", function () {
+  const faqItems = document.querySelectorAll(".choose__faq-item");
+
+  faqItems.forEach((item) => {
+    const header = item.querySelector(".choose__faq-header");
+    const content = item.querySelector(".choose__faq-content");
+    const icon = header.querySelector(".choose__faq-icon");
+
+    header.addEventListener("click", function () {
+      content.classList.toggle("active");
+      icon.classList.toggle("open");
+
+
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.querySelector(".choose__faq-content").classList.remove("active");
+          otherItem.querySelector(".choose__faq-icon").classList.remove("open");
+        }
+      });
+    });
+  });
+});
