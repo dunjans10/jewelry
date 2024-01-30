@@ -125,3 +125,36 @@ document.addEventListener('DOMContentLoaded', function () {
 
   window.addEventListener('scroll', scrollActive);
 });
+
+
+//Dark Light Theme
+
+
+const themeButton = document.getElementById('theme-button');
+
+const darkTheme = 'dark-theme';
+const iconTheme = 'fa-regular';
+
+const selectedTheme = localStorage.getItem('selected-theme');
+const selectedIcon = localStorage.getItem('selected-icon');
+
+const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light';
+const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'fa-regular fa-moon' : 'fa-regular fa-sun';
+
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
+}
+
+if (selectedIcon) {
+  themeButton.classList[selectedIcon === 'fa-regular fa-moon' ? 'add' : 'remove'](iconTheme);
+}
+
+themeButton.addEventListener('click', () => {
+  document.body.classList.toggle(darkTheme);
+  themeButton.classList.toggle('fa-moon');
+  themeButton.classList.toggle('fa-sun');
+
+  localStorage.setItem('selected-theme', getCurrentTheme());
+  localStorage.setItem('selected-icon', getCurrentIcon());
+});
