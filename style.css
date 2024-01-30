@@ -682,3 +682,54 @@ img.features__img {
   bottom: 3rem;
   cursor: pointer;
 }
+
+/* Join */
+
+.join__container{
+  padding-top: 1.5rem;
+}
+
+.join__bg{
+  row-gap: 0;
+  background-color: var(--container-color);
+  padding: 0 1.5rem 3.5rem 1.5rem;
+}
+.join__image {
+  text-align: center;
+} 
+
+img.join__img {
+  text-align: center;
+  width: 12.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.join__content{
+  row-gap: 2rem;
+}
+
+.join__data{
+  text-align: center;
+}
+
+.join__form{
+  display: grid;
+  row-gap: .75rem;
+}
+
+.join__input{
+  width: 100%;
+  background-color: var(--body-color);
+  padding: 1.25rem 1.5rem;
+  border-radius: 4rem;
+  color: var(--text-color);
+}
+
+.join__input::placeholder{
+  font-family: var(--second-font);
+}
+
+.join__button{
+  padding-block: 1.1rem;
+  cursor: pointer;
+}
