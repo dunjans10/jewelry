@@ -57,7 +57,9 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+ 
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -74,7 +76,9 @@ body {
 body {
   background-color: var(--body-color);
   color: var(--text-color);
-  transition: background .4s; 
+  transition: background .4s;
+  overflow-x: hidden; 
+ 
 }
 
 input,
@@ -378,13 +382,16 @@ img {
 
 /* Popular */
 
+
 .popular__data{
   text-align: center;
   padding-bottom: 3rem;
 }
 
 .popular-content{
-  padding-block: 2.5rem 5rem;
+ padding-block: 2.5rem 5rem;
+ overflow-x: hidden;
+ max-width: 300px;
 }
 
 .popular__card{
@@ -787,12 +794,7 @@ img.join__img {
   -webkit-background-clip: text;
   color: transparent;
 }
-
-.footer__data{
-  grid-template-columns: repeat(2, max-content);
-  gap: 2.5rem 4rem;
-}
-
+        
 .footer__title{
   font-size: var(--h3-font-size);
   font-weight: var(--font-medium);
@@ -1110,19 +1112,26 @@ img.join__img {
 
   padding-bottom: 0; 
 }
-
+footer {
+  padding: 20px;
+} 
 .footer__content{
-  grid-template-columns: repeat(3, max-content);
+ display: flex;
 }
 
-.footer__group{
-  flex-direction: row;
-  justify-content: space-around;
+.footer__left {
+  width: 48%;
 }
 
-.footer__copy{
-  order: -1;
+.footer__data{
+  display: flex;
 }
+
+.footer__links{
+  row-gap: 0;
+}
+
+
 
 }
 
@@ -1170,10 +1179,6 @@ img.join__img {
  
 }
 
-.footer__data{
-  grid-template-columns: repeat(4, max-content);
-  gap: 2.5rem 2rem;
-}
 }
 
 @media screen and (min-width:1152px){
